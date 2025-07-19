@@ -1,5 +1,5 @@
 PROJECT_MODE ?= dev
-PROJECT_NAME ?= frankenphp-sylius-$(PROJECT_MODE)
+PROJECT_NAME ?= sylius-demo-$(PROJECT_MODE)
 
 # Executables (local)
 ifeq ($(PROJECT_MODE), prod)

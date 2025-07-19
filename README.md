@@ -2,15 +2,15 @@
     <img src="docs/frankenphp-sylius-logo.png" alt="Starting point for Sylius eCommerce powered by FrankenPHP" width="600" />
 </p>
 
-<h1 align="center">Sylius FrankenPHP Edition by RoyalPHP</h1>
+<h1 align="center">General examples for Sylius eCommerce by RoyalPHP</h1>
 
-<h6 align="center">This edition is based on the Sylius Standard Edition.</h6>
+<h6 align="center">This edition is based on the Sylius FrankenPHP Edition.</h6>
 
 ## About
 
 A [Docker](https://docker.com)-based installer and runtime for the [Sylius](http://sylius.com) eCommerce with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com) inside!
 
-![CI](https://github.com/royalphp/frankenphp-sylius/workflows/CI/badge.svg)
+![CI](https://github.com/royalphp/sylius-demo/workflows/CI/badge.svg)
 
 ## Versions
 
@@ -45,7 +45,7 @@ Documentation for "Sylius" is available at [docs.sylius.com](http://docs.sylius.
 
 ## Bug Tracking
 
-If you want to report a bug or suggest an idea, please use [GitHub issues](https://github.com/royalphp/frankenphp-sylius/issues).
+If you want to report a bug or suggest an idea, please use [GitHub issues](https://github.com/royalphp/sylius-demo/issues).
 
 ## License
 
@@ -54,4 +54,4 @@ This theme uses [MIT License](LICENSE.md).
 ## Authors
 
 The theme was originally created by [RoyalPHP](https://github.com/royalphp).
-See the list of [contributors](https://github.com/royalphp/frankenphp-sylius/contributors).
+See the list of [contributors](https://github.com/royalphp/sylius-demo/contributors).

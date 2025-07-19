@@ -92,4 +92,29 @@ appAdminConfig.resolve.alias['sylius/bundle'] = syliusBundles;
 appAdminConfig.externals = Object.assign({}, appAdminConfig.externals, { window: 'window', document: 'document' });
 appAdminConfig.name = 'app.admin';
 
-module.exports = [shopConfig, adminConfig, appShopConfig, appAdminConfig];
+Encore.reset();
+
+// App shop of bootstrap theme config
+Encore
+  .setOutputPath('public/build/theme/shop/sylius-bootstrap/')
+  .setPublicPath('/build/theme/shop/sylius-bootstrap')
+  .addEntry('theme-shop-sylius-bootstrap-entry', path.resolve(__dirname, 'vendor/royalphp/sylius-bootstrap-theme/assets/scripts/entry.ts'))
+  .addStyleEntry('theme-shop-sylius-bootstrap-style', path.resolve(__dirname, 'vendor/royalphp/sylius-bootstrap-theme/assets/styles/entry.scss'))
+  .disableSingleRuntimeChunk()
+  .cleanupOutputBeforeBuild()
+  .enableSourceMaps(!Encore.isProduction())
+  .enableVersioning(Encore.isProduction())
+  .enableSassLoader()
+  .enablePostCssLoader()
+  .enableTypeScriptLoader();
+
+const themeShopSyliusBootstrapConfig = Encore.getWebpackConfig();
+themeShopSyliusBootstrapConfig.name = 'theme.shop.sylius_bootstrap';
+
+module.exports = [
+  shopConfig,
+  adminConfig,
+  appShopConfig,
+  appAdminConfig,
+  themeShopSyliusBootstrapConfig,
+];

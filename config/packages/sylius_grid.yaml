@@ -1,0 +1,21 @@
+sylius_grid:
+    templates:
+        action:
+            theme.bootstrap.default: '@SyliusShop/Grid/Action/default.html.twig'
+            theme.bootstrap.create: '@SyliusShop/Grid/Action/create.html.twig'
+            theme.bootstrap.delete: '@SyliusShop/Grid/Action/delete.html.twig'
+            theme.bootstrap.show: '@SyliusShop/Grid/Action/show.html.twig'
+            theme.bootstrap.update: '@SyliusShop/Grid/Action/update.html.twig'
+            theme.bootstrap.apply_transition: '@SyliusShop/Grid/Action/applyTransition.html.twig'
+            theme.bootstrap.links: '@SyliusShop/Grid/Action/links.html.twig'
+            theme.bootstrap.archive: '@SyliusShop/Grid/Action/archive.html.twig'
+        filter:
+            theme.bootstrap.string: '@SyliusShop/Grid/Filter/string.html.twig'
+            theme.bootstrap.boolean: '@SyliusShop/Grid/Filter/boolean.html.twig'
+            theme.bootstrap.date: '@SyliusShop/Grid/Filter/date.html.twig'
+            theme.bootstrap.entity: '@SyliusShop/Grid/Filter/entity.html.twig'
+            theme.bootstrap.money: '@SyliusShop/Grid/Filter/money.html.twig'
+            theme.bootstrap.exists: '@SyliusShop/Grid/Filter/exists.html.twig'
+            theme.bootstrap.select: '@SyliusShop/Grid/Filter/select.html.twig'
+        bulk_action:
+            theme.bootstrap.delete: '@SyliusShop/Grid/BulkAction/delete.html.twig'

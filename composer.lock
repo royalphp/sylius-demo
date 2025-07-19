@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6d8b24788f87dc06ee263db3cb5f367",
+    "content-hash": "8932f8c4bcc41c977805b304521ab017",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -6628,6 +6628,113 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.8.1"
             },
             "time": "2025-06-01T06:28:46+00:00"
+        },
+        {
+            "name": "royalphp/sylius-bootstrap-theme",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/royalphp/sylius-bootstrap-theme.git",
+                "reference": "441bbd9aa1c9f1586526ad9eb1197d49ace8113f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/royalphp/sylius-bootstrap-theme/zipball/441bbd9aa1c9f1586526ad9eb1197d49ace8113f",
+                "reference": "441bbd9aa1c9f1586526ad9eb1197d49ace8113f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "sylius/sylius": "^1.12",
+                "sylius/theme-bundle": "^2.3",
+                "symfony/webpack-encore-bundle": "^1.15"
+            },
+            "type": "sylius-theme",
+            "extra": {
+                "sylius-theme": {
+                    "title": "SyliusBootstrapTheme",
+                    "authors": [
+                        {
+                            "name": "RoyalPHP",
+                            "email": "royalphpofficial@gmail.com"
+                        }
+                    ],
+                    "screenshots": [
+                        {
+                            "path": "docs/media/page_homepage.webp",
+                            "title": "Homepage",
+                            "description": "Home page of the customer's shop."
+                        },
+                        {
+                            "path": "docs/media/page_cart.webp",
+                            "title": "Cart",
+                            "description": "Customer shopping cart page."
+                        },
+                        {
+                            "path": "docs/media/page_checkout.webp",
+                            "title": "Checkout",
+                            "description": "Customer checkout page."
+                        },
+                        {
+                            "path": "docs/media/page_products.webp",
+                            "title": "Products",
+                            "description": "List of products for customers."
+                        },
+                        {
+                            "path": "docs/media/page_product.webp",
+                            "title": "Product",
+                            "description": "Product page for customers."
+                        },
+                        {
+                            "path": "docs/media/page_product_reviews.webp",
+                            "title": "Product reviews",
+                            "description": "List of product reviews."
+                        },
+                        {
+                            "path": "docs/media/page_account_profile.webp",
+                            "title": "Account profile",
+                            "description": "Customer profile page."
+                        },
+                        {
+                            "path": "docs/media/page_account_address.webp",
+                            "title": "Account address",
+                            "description": "List of customer addresses"
+                        },
+                        {
+                            "path": "docs/media/page_account_orders.webp",
+                            "title": "Account orders",
+                            "description": "Customer order history page."
+                        },
+                        {
+                            "path": "docs/media/page_account_order.webp",
+                            "title": "Account order",
+                            "description": "Detailed information on the customer's order."
+                        }
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RoyalPHP",
+                    "email": "royalphpofficial@gmail.com"
+                }
+            ],
+            "description": "Minimalist theme for Sylius projects using Bootstrap css-framework and tools like Sass and Typescript.",
+            "keywords": [
+                "bootstrap",
+                "royalphp",
+                "sylius",
+                "sylius-theme"
+            ],
+            "support": {
+                "issues": "https://github.com/royalphp/sylius-bootstrap-theme/issues",
+                "source": "https://github.com/royalphp/sylius-bootstrap-theme/tree/0.1.1"
+            },
+            "time": "2024-06-26T21:53:09+00:00"
         },
         {
             "name": "runtime/frankenphp-symfony",

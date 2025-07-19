@@ -1,0 +1,23 @@
+sylius_ui:
+    events:
+        theme.bootstrap.sylius.grid:
+            blocks:
+                content:
+                    template: "@SyliusShop/Grid/_content.html.twig"
+                    priority: 10
+        theme.bootstrap.sylius.grid.body:
+            blocks:
+                navigation:
+                    template: "@SyliusShop/Grid/Body/_navigation.html.twig"
+                    priority: 30
+                table:
+                    template: "@SyliusShop/Grid/Body/_table.html.twig"
+                    priority: 20
+                pagination:
+                    template: "@SyliusShop/Grid/Body/_pagination.html.twig"
+                    priority: 10
+        theme.bootstrap.sylius.grid.filters:
+            blocks:
+                content:
+                    template: "@SyliusShop/Grid/Filter/_content.html.twig"
+                    priority: 10
