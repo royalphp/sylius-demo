@@ -64,7 +64,7 @@ final class ProductDemonstrationGrid extends AbstractGrid implements ResourceAwa
             ->addFilter(Filter::create('status', 'select')
                 ->setLabel('sylius.ui.status')
                 ->setFormOptions(['choices' => array_combine(
-                    array_map(static fn (string $status): string => 'app.ui.statuses.'.$status, ProductDemonstrationStatus::toArray()),
+                    array_map(static fn (string $status): string => ProductDemonstrationStatus::TRANS_KEY.'.'.$status, ProductDemonstrationStatus::toArray()),
                     ProductDemonstrationStatus::toArray(),
                 )])
                 ->setTemplate($this->gridHelper->getTemplateByTheme(GridHelperInterface::GRID_FILTER, 'select'))
@@ -83,7 +83,7 @@ final class ProductDemonstrationGrid extends AbstractGrid implements ResourceAwa
                 ->setLabel('sylius.ui.description')
                 ->setEnabled($this->gridHelper->getUserAccessHelper()->isAdminPage())
             )
-            ->addField(TwigField::create('capacity', $this->gridHelper->getTemplateByTheme(GridHelperInterface::GRID_FIELD, 'rawLabel'))
+            ->addField(TwigField::create('capacity', $this->gridHelper->getTemplateByTheme(GridHelperInterface::GRID_FIELD, 'numeric_value'))
                 ->setLabel('app.ui.capacity')
                 ->setSortable(true)
             )
