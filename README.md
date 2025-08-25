@@ -12,6 +12,12 @@ A [Docker](https://docker.com)-based installer and runtime for the [Sylius](http
 
 ![CI](https://github.com/royalphp/sylius-demo/workflows/CI/badge.svg)
 
+## Libraries
+
+The following third-party libraries are used in this demo repository:
+
+1. [SyliusBootstrapTheme](https://github.com/royalphp/sylius-bootstrap-theme)
+
 ## Versions
 
 | Repository Branch | Repository Tag | Sylius Version | Symfony Compatibility | PHP Compatibility |
