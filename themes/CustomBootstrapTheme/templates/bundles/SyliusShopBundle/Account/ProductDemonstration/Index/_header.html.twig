@@ -1,0 +1,10 @@
+<div class="row justify-content-between align-items-center mb-3 mb-sm-0">
+    <div class="col-auto">
+        {% include configuration.vars.templates.header_title|default('@SyliusShop/Account/ProductDemonstration/Index/_headerTitle.html.twig') %}
+
+        {{ sylius_template_event([event_prefix ~ '.header', 'app.shop.index.header'], _context) }}
+    </div>
+    <div class="col-auto">
+        {% include '@SyliusShop/Account/ProductDemonstration/Index/_actions.html.twig' %}
+    </div>
+</div>

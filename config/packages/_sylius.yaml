@@ -270,6 +270,7 @@ sylius_theme:
         filesystem:
             scan_depth: 1
             directories:
+                - '%kernel.project_dir%/vendor/royalphp/sylius-bootstrap-theme'
                 - '%kernel.project_dir%/themes'
 
 sylius_refund:

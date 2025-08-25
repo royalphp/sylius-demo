@@ -1,0 +1,9 @@
+{% set path = options.link.url|default(path(options.link.route, options.link.parameters)) %}
+
+<form action="{{ path }}" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token(data.id) }}" />
+    <button type="submit" class="btn btn-outline-primary btn-sm">
+        <i class="bi bi-{{ data.featured ? 'toggle-on' : 'toggle-off' }}"></i> {{ action.label|trans }}
+    </button>
+</form>

@@ -1,0 +1,57 @@
+sylius_ui:
+    events:
+        theme.bootstrap.sylius.grid:
+            blocks:
+                content:
+                    template: "@SyliusShop/Grid/_content.html.twig"
+                    priority: 10
+        theme.bootstrap.sylius.grid.body:
+            blocks:
+                navigation:
+                    template: "@SyliusShop/Grid/Body/_navigation.html.twig"
+                    priority: 30
+                table:
+                    template: "@SyliusShop/Grid/Body/_table.html.twig"
+                    priority: 20
+                pagination:
+                    template: "@SyliusShop/Grid/Body/_pagination.html.twig"
+                    priority: 10
+        theme.bootstrap.sylius.grid.filters:
+            blocks:
+                content:
+                    template: "@SyliusShop/Grid/Filter/_content.html.twig"
+                    priority: 10
+
+        app.admin.product_demonstration.create:
+            blocks:
+                header: '@SyliusAdmin/Crud/Create/_header.html.twig'
+                content: '@SyliusAdmin/Crud/Create/_content.html.twig'
+        app.admin.product_demonstration.index:
+            blocks:
+                header: '@SyliusAdmin/Crud/Index/_header.html.twig'
+                content: '@SyliusAdmin/Crud/Index/_content.html.twig'
+        app.admin.product_demonstration.show:
+            blocks:
+                header: '@SyliusAdmin/Crud/Show/_header.html.twig'
+                content: '@SyliusAdmin/Crud/Show/_content.html.twig'
+        app.admin.product_demonstration.update:
+            blocks:
+                header: '@SyliusAdmin/Crud/Update/_header.html.twig'
+                content: '@SyliusAdmin/Crud/Update/_content.html.twig'
+
+        app.shop.product_demonstration.create:
+            blocks:
+                header: '@SyliusShop/Account/ProductDemonstration/Create/_header.html.twig'
+                content: '@SyliusShop/Account/ProductDemonstration/Create/_content.html.twig'
+        app.shop.product_demonstration.index:
+            blocks:
+                header: '@SyliusShop/Account/ProductDemonstration/Index/_header.html.twig'
+                content: '@SyliusShop/Account/ProductDemonstration/Index/_content.html.twig'
+        app.shop.product_demonstration.show:
+            blocks:
+                header: '@SyliusShop/Account/ProductDemonstration/Show/_header.html.twig'
+                content: '@SyliusShop/Account/ProductDemonstration/Show/_content.html.twig'
+        app.shop.product_demonstration.update:
+            blocks:
+                header: '@SyliusShop/Account/ProductDemonstration/Update/_header.html.twig'
+                content: '@SyliusShop/Account/ProductDemonstration/Update/_content.html.twig'

@@ -1,0 +1,10 @@
+<div class="ui stackable two column grid">
+    <div class="column">
+        {% include configuration.vars.templates.header_title|default('@SyliusShop/Account/ProductDemonstration/Show/_headerTitle.html.twig') %}
+
+        {{ sylius_template_event([event_prefix ~ '.header', 'app.shop.show.header'], {'metadata': metadata, 'resource': resource}) }}
+    </div>
+    <div class="middle aligned column">
+        {% include configuration.vars.templates.toolbar|default('@SyliusShop/Account/ProductDemonstration/Show/_toolbar.html.twig') ignore missing %}
+    </div>
+</div>

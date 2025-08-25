@@ -1,0 +1,5 @@
+{% if definition.actionGroups.main is defined %}
+    {% for action in definition.getEnabledActions('main') %}
+        {{ sylius_grid_render_action(resources, action, null) }}
+    {% endfor %}
+{% endif %}

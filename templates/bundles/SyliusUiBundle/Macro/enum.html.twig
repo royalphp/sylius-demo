@@ -1,0 +1,50 @@
+{% macro statusAsLabel(status) %}
+    {% import _self as labels %}
+
+    {% if status.value == 'requested' %}
+        {{ labels.requestedLabel() }}
+    {% elseif status.value == 'handling' %}
+        {{ labels.handlingLabel() }}
+    {% elseif status.value == 'pending' %}
+        {{ labels.pendingLabel() }}
+    {% elseif status.value == 'completed' %}
+        {{ labels.completedLabel() }}
+    {% elseif status.value == 'cancelled' %}
+        {{ labels.cancelledLabel() }}
+    {% endif %}
+{% endmacro %}
+
+{% macro requestedLabel() %}
+    <span class="ui blue label">
+        <i class="forward icon"></i>
+        {{ 'app.ui.statuses.requested'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro handlingLabel() %}
+    <span class="ui orange label">
+        <i class="step forward icon"></i>
+        {{ 'app.ui.statuses.handling'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro pendingLabel() %}
+    <span class="ui yellow label">
+        <i class="step backward icon"></i>
+        {{ 'app.ui.statuses.pending'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro completedLabel() %}
+    <span class="ui green label">
+        <i class="play circle icon"></i>
+        {{ 'app.ui.statuses.completed'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro cancelledLabel() %}
+    <span class="ui red label">
+        <i class="stop circle icon"></i>
+        {{ 'app.ui.statuses.cancelled'|trans }}
+    </span>
+{% endmacro %}

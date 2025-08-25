@@ -1,0 +1,9 @@
+<div class="ui stackable two column grid">
+    <div class="column">
+        {% include configuration.vars.templates.header_title|default('@SyliusShop/Account/ProductDemonstration/Index/_headerTitle.html.twig') %}
+
+        {{ sylius_template_event([event_prefix ~ '.header', 'app.shop.index.header'], _context) }}
+    </div>
+
+    {% include '@SyliusShop/Account/ProductDemonstration/Index/_actions.html.twig' %}
+</div>

@@ -2,11 +2,20 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
+    "@popperjs/core": "^2.11.8",
     "@sylius-ui/frontend": "^1.0.0",
+    "@types/bootstrap": "^5.2.10",
     "bazinga-translator": "^7.0.0",
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1",
+    "flag-icons": "^7.5.0",
     "intl-messageformat": "^10.7.16",
     "lodash.get": "^4.4.2",
-    "shepherd.js": "11.0"
+    "postcss-loader": "^7.3.4",
+    "shepherd.js": "11.0",
+    "tom-select": "^2.4.3",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "dev-server": "encore dev-server",

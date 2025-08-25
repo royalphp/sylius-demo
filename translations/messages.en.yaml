@@ -1,0 +1,31 @@
+app:
+    menu:
+        admin:
+            main:
+                demos:
+                    header: 'Demos'
+                    product_demonstrations: 'Product demonstrations'
+        shop:
+            account:
+                demos:
+                    product_demonstrations: 'Product demonstrations'
+    ui:
+        product_demonstration: 'Product demonstration'
+        product_demonstrations: 'Product demonstrations'
+        list_product_demonstration: 'List of demo products'
+        new_product_demonstration: 'New demo product'
+        get_product_demonstration: 'Show demo product'
+        edit_product_demonstration: 'Edit demo product'
+        toggle_featured: 'Toggle featured'
+        success_toggle_featured: 'The featured property has been successfully toggled.'
+        danger_toggle_featured: 'The featured property could not be toggled, the demo product must be completed.'
+        capacity: 'Capacity'
+        featured: 'Featured'
+        completed_at: 'Completed at'
+        property: 'Property'
+        statuses:
+            requested: 'Requested'
+            handling: 'Handling'
+            pending: 'Pending'
+            completed: 'Completed'
+            cancelled: 'Cancelled'

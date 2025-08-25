@@ -26,7 +26,34 @@ services:
         exclude:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
+            - '../src/Fixture/'
             - '../src/Kernel.php'
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+    # Controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: [ 'controller.service_arguments' ]
+
+    app.fixture.example_factory.product_demonstration:
+        class: App\Fixture\Factory\ProductDemonstrationExampleFactory
+        arguments:
+            - '@app.factory.product_demonstration'
+        public: true
+
+    app.fixture.product_demonstration:
+        class: App\Fixture\ProductDemonstrationFixture
+        arguments:
+            - "@doctrine.orm.default_entity_manager"
+            - "@app.fixture.example_factory.product_demonstration"
+        tags:
+            - { name: sylius_fixtures.fixture }
+
+    app.form.type.product_demonstration:
+        class: App\Form\Product\ProductDemonstrationType
+        arguments:
+            - '@App\Utils\UserAccessHelperInterface'
+            - App\Entity\Product\ProductDemonstration
+            - [ 'sylius', 'app_product_demonstration' ]
+        tags:
+            - { name: form.type }

@@ -1,0 +1,6 @@
+{% import '@SyliusShop/Common/Macro/buttons.html.twig' as buttons %}
+
+<div class="row justify-content-between">
+    <div class="col-auto">{{ buttons.cancel(paths.cancel|default(null)) }}</div>
+    <div class="col-auto">{{ buttons.submit('sylius.ui.save_changes', 'save-changes', 'save') }}</div>
+</div>

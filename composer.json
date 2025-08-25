@@ -1,6 +1,6 @@
 {
-    "name": "royalphp/frankenphp-sylius",
-    "description": "Starting point for Sylius eCommerce powered by FrankenPHP.",
+    "name": "royalphp/sylius-demo",
+    "description": "General examples based on Sylius FrankenPHP Edition.",
     "keywords": [
         "royalphp",
         "sylius",
@@ -24,6 +24,7 @@
         "ext-gd": "*",
         "ext-iconv": "*",
         "dragonmantank/cron-expression": "^3.4",
+        "royalphp/sylius-bootstrap-theme": "^0.1",
         "runtime/frankenphp-symfony": "^0.2.0",
         "sylius/mollie-plugin": "^2.2",
         "sylius/paypal-plugin": "^1.7",

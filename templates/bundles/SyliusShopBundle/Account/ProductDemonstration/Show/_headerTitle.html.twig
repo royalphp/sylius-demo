@@ -1,0 +1,5 @@
+{% import '@SyliusUi/Macro/headers.html.twig' as headers %}
+
+{% set subheader = configuration.vars.subheader|default(metadata.applicationName~'.ui.get_'~metadata.name) %}
+
+{{ headers.default(header|trans, configuration.vars.icon|default(null), subheader|trans) }}

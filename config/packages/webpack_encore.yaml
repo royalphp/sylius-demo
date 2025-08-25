@@ -29,6 +29,7 @@ webpack_encore:
         shop: '%kernel.project_dir%/public/build/shop'
         app.admin: '%kernel.project_dir%/public/build/app/admin'
         app.shop: '%kernel.project_dir%/public/build/app/shop'
+        theme.shop.sylius_bootstrap: '%kernel.project_dir%/public/build/theme/shop/sylius-bootstrap'
 
 framework:
     assets:
@@ -41,6 +42,8 @@ framework:
                 json_manifest_path: '%kernel.project_dir%/public/build/app/admin/manifest.json'
             app.shop:
                 json_manifest_path: '%kernel.project_dir%/public/build/app/shop/manifest.json'
+            theme.shop.sylius_bootstrap:
+                json_manifest_path: '%kernel.project_dir%/public/build/theme/shop/sylius-bootstrap/manifest.json'
 
 #when@prod:
 #    webpack_encore:
