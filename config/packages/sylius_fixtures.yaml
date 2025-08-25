@@ -1,0 +1,7 @@
+sylius_fixtures:
+    suites:
+        demo_examples:
+            fixtures:
+                product_demonstration:
+                    options:
+                        random: 100

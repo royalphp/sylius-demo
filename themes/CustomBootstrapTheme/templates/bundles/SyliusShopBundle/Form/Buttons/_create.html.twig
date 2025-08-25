@@ -1,0 +1,12 @@
+{% import '@SyliusShop/Common/Macro/buttons.html.twig' as buttons %}
+
+{% if paths.cancel is not null %}
+    {% set cancelPath = paths.cancel|split('?')[0] %}
+{% else %}
+    {% set cancelPath = null %}
+{% endif %}
+
+<div class="row justify-content-between">
+    <div class="col-auto">{{ buttons.cancel(sylius_generate_redirect_path(cancelPath)) }}</div>
+    <div class="col-auto">{{ buttons.submit('sylius.ui.create', 'create', 'plus-square') }}</div>
+</div>

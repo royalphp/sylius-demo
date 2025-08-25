@@ -1,0 +1,25 @@
+{% macro crumble(crumbs = {}, divider = '/', root_path, root_label) %}
+    {% set separator %}
+        {% if divider is null %}
+            <i class="right chevron icon divider"></i>
+        {% else %}
+            <div class="divider"> {{ divider }} </div>
+        {% endif %}
+    {% endset %}
+
+    <div class="ui breadcrumb">
+        {% for crumb in crumbs %}
+            {% if loop.last %}
+                <div class="active section">{{ crumb.label }}</div>
+            {% elseif crumb.url is defined %}
+                <a href="{{ crumb.url }}" class="section">{{ crumb.label }}</a>
+                {{ separator }}
+            {% else %}
+                <div class="section">{{ crumb.label }}</div>
+                {{ separator }}
+            {% endif %}
+        {% else %}
+            <a href="{{ root_path|default('/') }}" class="section">{{ root_label|default('sylius.ui.root'|trans) }}</a>
+        {% endfor %}
+    </div>
+{% endmacro %}

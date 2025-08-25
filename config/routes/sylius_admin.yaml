@@ -1,3 +1,15 @@
 sylius_admin:
     resource: "@SyliusAdminBundle/Resources/config/routing.yml"
     prefix: '/%sylius_admin.path_name%'
+
+app_admin_product_demonstration:
+    resource: |
+        alias: app.product_demonstration
+        path: /product-demonstrations
+        section: admin
+        templates: "@SyliusAdmin\\Crud"
+        except: ['show']
+        redirect: update
+        grid: app_product_demonstration
+    type: sylius.resource
+    prefix: /admin

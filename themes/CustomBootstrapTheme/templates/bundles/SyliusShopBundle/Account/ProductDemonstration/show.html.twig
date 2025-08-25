@@ -1,0 +1,28 @@
+{% extends '@SyliusShop/Account/layout.html.twig' %}
+
+{% set header = configuration.vars.header|default(metadata.applicationName~'.ui.'~metadata.pluralName) %}
+{% set event_prefix = metadata.applicationName ~ '.shop.' ~ metadata.name ~ '.show' %}
+
+{% block title %}
+    {{ header|trans }} | {{ parent() }}
+{% endblock %}
+
+{% block breadcrumb %}
+    {% include configuration.vars.templates.breadcrumb|default('@SyliusShop/Account/ProductDemonstration/Show/_breadcrumb.html.twig') %}
+{% endblock %}
+
+{% block subcontent %}
+    {{ sylius_template_event([event_prefix, 'app.shop.show'], _context) }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {{ sylius_template_event([event_prefix ~ '.stylesheets', 'sylius.shop.create.stylesheets'], { 'metadata': metadata }) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ sylius_template_event([event_prefix ~ '.javascripts', 'sylius.shop.create.javascripts'], { 'metadata': metadata }) }}
+{% endblock %}

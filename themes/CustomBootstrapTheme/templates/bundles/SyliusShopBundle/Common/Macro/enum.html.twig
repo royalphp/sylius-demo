@@ -1,0 +1,50 @@
+{% macro statusAsLabel(status) %}
+    {% import _self as labels %}
+
+    {% if status.value == 'requested' %}
+        {{ labels.requestedLabel() }}
+    {% elseif status.value == 'handling' %}
+        {{ labels.handlingLabel() }}
+    {% elseif status.value == 'pending' %}
+        {{ labels.pendingLabel() }}
+    {% elseif status.value == 'completed' %}
+        {{ labels.completedLabel() }}
+    {% elseif status.value == 'cancelled' %}
+        {{ labels.cancelledLabel() }}
+    {% endif %}
+{% endmacro %}
+
+{% macro requestedLabel() %}
+    <span class="badge rounded-pill text-bg-primary">
+        <i class="bi bi-fast-forward-fill"></i>
+        {{ 'app.ui.statuses.requested'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro handlingLabel() %}
+    <span class="badge rounded-pill text-bg-info">
+        <i class="bi bi-skip-end-fill"></i>
+        {{ 'app.ui.statuses.handling'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro pendingLabel() %}
+    <span class="badge rounded-pill text-bg-warning">
+        <i class="bi bi-skip-start-fill"></i>
+        {{ 'app.ui.statuses.pending'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro completedLabel() %}
+    <span class="badge rounded-pill text-bg-success">
+        <i class="bi bi-play-circle-fill"></i>
+        {{ 'app.ui.statuses.completed'|trans }}
+    </span>
+{% endmacro %}
+
+{% macro cancelledLabel() %}
+    <span class="badge rounded-pill text-bg-danger">
+        <i class="bi bi-stop-circle-fill"></i>
+        {{ 'app.ui.statuses.cancelled'|trans }}
+    </span>
+{% endmacro %}

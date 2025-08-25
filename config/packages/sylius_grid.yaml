@@ -9,6 +9,9 @@ sylius_grid:
             theme.bootstrap.apply_transition: '@SyliusShop/Grid/Action/applyTransition.html.twig'
             theme.bootstrap.links: '@SyliusShop/Grid/Action/links.html.twig'
             theme.bootstrap.archive: '@SyliusShop/Grid/Action/archive.html.twig'
+
+            toggle_featured: '@SyliusUi/Grid/Action/toggle_featured.html.twig'
+            theme.bootstrap.toggle_featured: '@SyliusShop/Grid/Action/toggle_featured.html.twig'
         filter:
             theme.bootstrap.string: '@SyliusShop/Grid/Filter/string.html.twig'
             theme.bootstrap.boolean: '@SyliusShop/Grid/Filter/boolean.html.twig'
@@ -17,5 +20,8 @@ sylius_grid:
             theme.bootstrap.money: '@SyliusShop/Grid/Filter/money.html.twig'
             theme.bootstrap.exists: '@SyliusShop/Grid/Filter/exists.html.twig'
             theme.bootstrap.select: '@SyliusShop/Grid/Filter/select.html.twig'
+
+            number_range: '@SyliusUi/Grid/Filter/number_range.html.twig'
+            theme.bootstrap.number_range: '@SyliusShop/Grid/Filter/number_range.html.twig'
         bulk_action:
             theme.bootstrap.delete: '@SyliusShop/Grid/BulkAction/delete.html.twig'

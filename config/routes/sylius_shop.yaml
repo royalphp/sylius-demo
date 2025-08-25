@@ -27,3 +27,22 @@ sylius_shop_request_password_reset_token_redirect:
     defaults:
         route: sylius_shop_request_password_reset_token
         permanent: false
+
+app_shop_account_product_demonstration:
+    resource: |
+        alias: app.product_demonstration
+        path: /product-demonstrations
+        section: shop_account
+        templates: "@SyliusShop\\Account\\ProductDemonstration"
+        grid: app_product_demonstration
+    type: sylius.resource
+    prefix: /{_locale}/account
+
+app_shop_account_product_demonstration_toggle_featured:
+    path: /{_locale}/account/product-demonstrations/{id<\d+>}/toggle-featured
+    methods: [PATCH]
+    controller: App\Controller\Product\ProductDemonstrationController::toggleFeaturedAction
+    defaults:
+        _sylius:
+            redirect: app_shop_account_product_demonstration_index
+            section: shop_account

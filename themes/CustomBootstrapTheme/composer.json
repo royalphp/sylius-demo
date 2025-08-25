@@ -1,0 +1,12 @@
+{
+    "name": "sylius-demo/custom-bootstrap-theme",
+    "description": "Custom theme powered by SyliusBootstrapTheme",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "extra": {
+        "sylius-theme": {
+            "title": "CustomBootstrapTheme",
+            "parents": ["royalphp/sylius-bootstrap-theme"]
+        }
+    }
+}

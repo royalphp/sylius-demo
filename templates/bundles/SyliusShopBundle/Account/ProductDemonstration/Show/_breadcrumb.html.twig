@@ -1,0 +1,17 @@
+{% import '@SyliusShop/Common/Macro/breadcrumb.html.twig' as breadcrumb %}
+
+{% set index_url = path(
+    configuration.vars.index.route.name|default(configuration.getRouteName('index')),
+    configuration.vars.index.route.parameters|default(configuration.vars.route.parameters|default({}))
+) %}
+
+{% set breadcrumb = configuration.vars.breadcrumb|default(metadata.applicationName~'.ui.'~metadata.pluralName) %}
+{% set breadcrumbs = [
+    { label: 'sylius.ui.home'|trans, url: path('sylius_shop_homepage') },
+    { label: 'sylius.ui.my_account'|trans, url: path('sylius_shop_account_dashboard') },
+    { label: breadcrumb|trans, url: index_url },
+    { label: resource.name|default(resource.code|default(resource.id)) },
+    { label: 'sylius.ui.show'|trans }
+] %}
+
+{{ breadcrumb.crumble(breadcrumbs) }}

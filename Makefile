@@ -90,6 +90,7 @@ ifeq ($(PROJECT_MODE), prod)
 	make sf c='sylius:install --no-interaction'
 else
 	make sf c='sylius:install --no-interaction --fixture-suite=default'
+	make sf c='sylius:fixtures:load --no-interaction demo_examples'
 endif
 
 build_assets: ## Build optimized frontend data by environment

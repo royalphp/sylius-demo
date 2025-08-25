@@ -1,0 +1,9 @@
+sylius_resource:
+    resources:
+        app.product_demonstration:
+            driver: doctrine/orm
+            classes:
+                form: App\Form\Product\ProductDemonstrationType
+                model: App\Entity\Product\ProductDemonstration
+                repository: App\Repository\Product\ProductDemonstrationRepository
+                controller: App\Controller\Product\ProductDemonstrationController
