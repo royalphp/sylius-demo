@@ -1,10 +1,10 @@
-<p align="center">
-    <img src="docs/frankenphp-sylius-logo.png" alt="Starting point for Sylius eCommerce powered by FrankenPHP" width="600" />
-</p>
+# Sylius FrankenPHP Edition by RoyalPHP
 
-<h1 align="center">General examples for Sylius eCommerce by RoyalPHP</h1>
+# General examples for Sylius eCommerce by RoyalPHP
 
-<h6 align="center">This edition is based on the Sylius FrankenPHP Edition.</h6>
+This demo project is based on the Sylius FrankenPHP Edition.
+
+![Starting point for Sylius eCommerce powered by FrankenPHP](docs/frankenphp-sylius-logo.png)
 
 ## About
 
@@ -35,7 +35,7 @@ make setup
 
 Under the hood, this command executes a few other commands needed to run your project for the first time,
 and you won't need this command again (unless you want to reconfigure your project).
-After successful execution of this command, you can open it in the browser at the standard url: https://localhost/
+After successful execution of this command, you can open it in the browser at the standard url: `https://localhost`
 
 By default, you are working in a development environment, so `make` commands do not require additional options,
 however, if you want to deploy your project to a production server, or run any command in production,
@@ -55,7 +55,7 @@ If you want to report a bug or suggest an idea, please use [GitHub issues](https
 
 ## License
 
-This theme uses [MIT License](LICENSE.md).
+This theme uses [MIT License](LICENSE).
 
 ## Authors
 

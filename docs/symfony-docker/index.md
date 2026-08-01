@@ -3,6 +3,10 @@
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework,
 with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) inside!
 
+Coding-agents ready: ships with a [Dev Container](https://containers.dev/) and a [one-page guide](agents.md)
+to run [OpenCode](https://opencode.ai), [Claude Code](https://claude.ai/claude-code), or any AI coding assistant,
+against a local or a remote model, with an optional network sandbox.
+
 ![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
 
 ## Getting Started
@@ -15,16 +19,20 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 
 ## Features
 
-* Production, development and CI ready
-* Just 1 service by default
-* Blazing-fast performance thanks to [the worker mode of FrankenPHP](https://github.com/dunglas/frankenphp/blob/main/docs/worker.md) (automatically enabled in prod mode)
-* [Installation of extra Docker Compose services](docs/extra-services.md) with Symfony Flex
-* Automatic HTTPS (in dev and prod)
-* HTTP/3 and [Early Hints](https://symfony.com/blog/new-in-symfony-6-3-early-hints) support
-* Real-time messaging thanks to a built-in [Mercure hub](https://symfony.com/doc/current/mercure.html)
-* [Vulcain](https://vulcain.rocks) support
-* Native [XDebug](docs/xdebug.md) integration
-* Super-readable configuration
+- Production, development and CI ready
+- Just 1 service by default
+- Super-readable configuration
+- Blazing-fast performance thanks to [the worker mode of FrankenPHP](https://frankenphp.dev/docs/worker/)
+- [Installation of extra Docker Compose services](extra-services.md) with Symfony Flex
+- Automatic HTTPS (in dev and prod)
+- HTTP/3 and [Early Hints](https://symfony.com/blog/new-in-symfony-6-3-early-hints) support
+- Real-time messaging thanks to a built-in [Mercure hub](https://symfony.com/doc/current/mercure.html)
+- [Vulcain](https://vulcain.rocks) support
+- Native [XDebug](xdebug.md) integration
+- [Hot Reloading](https://frankenphp.dev/docs/hot-reload/)
+- [Dev Container](https://containers.dev/) support
+- [AI coding agents](agents.md) with an optional network sandbox
+- Rootless, slim production image
 
 **Enjoy!**
 
@@ -41,6 +49,7 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 9. [Using a Makefile](makefile.md)
 10. [Updating the template](updating.md)
 11. [Troubleshooting](troubleshooting.md)
+12. [Using AI coding agents](agents.md)
 
 ## License
 
